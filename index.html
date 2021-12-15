@@ -6,17 +6,35 @@
   <link href="style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
   <audio controls>
-    <source src="https://radio.goodtimesbadtimes.club/radio/8040/radio.mp3" type="audio/mpeg">
+    <source src="https://radio.goodtimesbadtimes.club:8010/radio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
-  </audio>
+  </audio><br>
+  <button onclick="showInfo()" href="#info">Info</button><br>
+  <div id="info">
+    – Zorg dat je microfoon op muted staat.<br>
+    – Als je de livestream pauzeert en later weer wil hervatten, refresh de pagina om up to date
+    te blijven. Je kunt ook de volume knop rechts in de afspeelbalk gebruiken om tijdelijk de
+    stream te muten.
+  </div>
 
 </body>
+
+<script>
+function showInfo() {
+  var x = document.getElementById("info");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
 </html>
